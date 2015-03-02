@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 
+import sys
 import json
 import requests
 from time import sleep
 import argparse
 import ConfigParser
+import firehoser_requests
 
 #Handle Command Line Parameters 
 parser = argparse.ArgumentParser(description="Settings to control the feed")
@@ -44,7 +46,7 @@ else:
     
 bearer = "Bearer " + access_token
 headers = {"Authorization": bearer,"accept-encoding":"gzip,deflate"}
-r = requests.get(url, stream=True, headers=headers)
+r = firehoser_requests.get(url, stream=True, headers=headers)
 
 #Read the Stream
 if r.status_code == requests.codes.ok:
