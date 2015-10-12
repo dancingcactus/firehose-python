@@ -9,7 +9,7 @@ Basic usage
     
     python firehoser.py -a [ACCESS_TOKEN] -u [FIREHOSE_URL]
     
-Slowing down requests to be half a second appart
+Slowing down requests to be half a second apart
 
     python firehoser.py -a [ACCESS_TOKEN] -u [FIREHOSE_URL] -s 0.5
     
